@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "38121128-eeab-4a2b-9bf0-ce31add9b046",
+		"name": "Laravel 6.12.0 REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Muath",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "muathye@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111222333",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "111222333",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTFiMjA5MDBhMmE4M2NmZDY1NDdhOGExMmE4MDE3ZDFlNzY1NzZkODY5NDMxYmJhOGI2MjUzNWI4NGNiNDEyNDM4NTA0OWE4YzA2YmQzMjQiLCJpYXQiOjE1ODA0NTUzODIsIm5iZiI6MTU4MDQ1NTM4MiwiZXhwIjoxNjEyMDc3NzgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FgJjUlFp2IrsNysomwM4z0dPvUXt8fDrWrEcHwsiBj2GNyyPDpwHVVWl3vEKZEGD3LLSrBGe9PjvcLxyhNtw62vaJW8RvKwj4d4cfENLIqXpf7ikJKH3flR-83vztBt0TK7kUi2Cx9wZk8l9zg4hbFxavVsEpfCG-1vMz6gEQAGtVhLdiNnLTiIh48fXVAZqg2Y1Re0LpXl5jcf4FtEStrSkTVYkpD_EIs3SqaOttljyyjk7RoIAFm5Xj1i9Fa5EDh5wDo7s6R5flP8NG9ZccUlyzPSY2VjMzji77kLpODVEMGOzr6LwRgDMhtX51OxaflmbzwEf2JIPy16w5ibAA7c_hf_tVBJ3t4Uq9rptMNghNa9j6SZoyW6sI0AstOCUacT1vpUtqIm4J22luZ-nEhBPZzYUzkkB8tBCURgvFIb-lyWzGsnn1QDAy03XMbaicxVI6qSgivuNPX3MVkSRMe4GXBVYzrn67-U4ry9YdNLUtdle9PcCIbrKSVx1lh64PnPtZpc3xthPHJ2xq5gFbZYvBzmATNsql-sRWWtvjWBO733w1pKNOQAXf0n8VRW_rbkw2BLMJX2tjhh11bporTE8ZoX5aF2tgTsTMdzHpZitMTTC0l9wlXPvIKe2bX8APOZ_VtNCgUWP5q843-Mu58sUJ7sY9t7J5GCcRd5CVx4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "muathye@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111222333",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNmZhMWRkYTM1MDUzNWJlYzA1MmFmNDliOTZiNzY5ZjRiZWVlZjI0OGQ3Mzg2YzQ5N2M4ODA0NjMwZjA1MzQ1MjE2OWI1Zjk2ZTRkZDNjZjAiLCJpYXQiOjE1ODA0NTU0NzcsIm5iZiI6MTU4MDQ1NTQ3NywiZXhwIjoxNjEyMDc3ODc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZIt-1T2IN3hfm-QxBhHlUn9ANkpNEiK6lAFv8Z8g5mJU28YaXAhuEmhE4CAeaO3jV9wkyP9924tTxhXpJGSiaVLsSAPbu0YTVC7IsDeA5SBa7u6vaMYOCSjHwyMq-EXLYVVfYDNrFha8BuEEzblGSAE2AR56eg9ef4tqHl2vBzeScCsWAbMG6vLPTeaD5MPZLogJBgQcqLs3rNQ2KrN6N_A5qZlcnsySMSmEeeVqGXUhfxGP334DBvHUNiwvnyAHC6jJynuDfL3_cybZ56UiUsNmaEvMW5RqsM87KSuRgcvDJ5NHEYp5eeUjIQy-s9j6wJ_sac-vpzFkG92svpNcQWf6KjWNWW7gAr2u_fw3K-tjtx8UbrGSHPNDY00HkLi6LfiL_GcT8pPGgEJghnS3ela1nJncdrhdSRFm9danaTqifebno4av-pcYXLsjOzmuLNqt-1cvh8BnZNp42QgfnySxtARliQShE9tfIN9LZmPHMmuB9Wit7C43Jhh0u-kPMDi_RCSNm7GKdZhlgFIpHi-hAWMVfBd9pDmGPwroQ3dzQAQ8YOdmoUaJrTe7ZuIzTwi6PeL54HDOfvvcDwF0hFIZfelNgAvpcVZQf92b4039_v6VtARrunPmoxbK5mo0E5N59mNcfZcfTCgv20Lylg7t0-bVWepm1IQPZJALw6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNmZhMWRkYTM1MDUzNWJlYzA1MmFmNDliOTZiNzY5ZjRiZWVlZjI0OGQ3Mzg2YzQ5N2M4ODA0NjMwZjA1MzQ1MjE2OWI1Zjk2ZTRkZDNjZjAiLCJpYXQiOjE1ODA0NTU0NzcsIm5iZiI6MTU4MDQ1NTQ3NywiZXhwIjoxNjEyMDc3ODc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZIt-1T2IN3hfm-QxBhHlUn9ANkpNEiK6lAFv8Z8g5mJU28YaXAhuEmhE4CAeaO3jV9wkyP9924tTxhXpJGSiaVLsSAPbu0YTVC7IsDeA5SBa7u6vaMYOCSjHwyMq-EXLYVVfYDNrFha8BuEEzblGSAE2AR56eg9ef4tqHl2vBzeScCsWAbMG6vLPTeaD5MPZLogJBgQcqLs3rNQ2KrN6N_A5qZlcnsySMSmEeeVqGXUhfxGP334DBvHUNiwvnyAHC6jJynuDfL3_cybZ56UiUsNmaEvMW5RqsM87KSuRgcvDJ5NHEYp5eeUjIQy-s9j6wJ_sac-vpzFkG92svpNcQWf6KjWNWW7gAr2u_fw3K-tjtx8UbrGSHPNDY00HkLi6LfiL_GcT8pPGgEJghnS3ela1nJncdrhdSRFm9danaTqifebno4av-pcYXLsjOzmuLNqt-1cvh8BnZNp42QgfnySxtARliQShE9tfIN9LZmPHMmuB9Wit7C43Jhh0u-kPMDi_RCSNm7GKdZhlgFIpHi-hAWMVfBd9pDmGPwroQ3dzQAQ8YOdmoUaJrTe7ZuIzTwi6PeL54HDOfvvcDwF0hFIZfelNgAvpcVZQf92b4039_v6VtARrunPmoxbK5mo0E5N59mNcfZcfTCgv20Lylg7t0-bVWepm1IQPZJALw6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "PC",
+							"type": "text"
+						},
+						{
+							"key": "details",
+							"value": "This is a gaming pc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show a product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNmZhMWRkYTM1MDUzNWJlYzA1MmFmNDliOTZiNzY5ZjRiZWVlZjI0OGQ3Mzg2YzQ5N2M4ODA0NjMwZjA1MzQ1MjE2OWI1Zjk2ZTRkZDNjZjAiLCJpYXQiOjE1ODA0NTU0NzcsIm5iZiI6MTU4MDQ1NTQ3NywiZXhwIjoxNjEyMDc3ODc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZIt-1T2IN3hfm-QxBhHlUn9ANkpNEiK6lAFv8Z8g5mJU28YaXAhuEmhE4CAeaO3jV9wkyP9924tTxhXpJGSiaVLsSAPbu0YTVC7IsDeA5SBa7u6vaMYOCSjHwyMq-EXLYVVfYDNrFha8BuEEzblGSAE2AR56eg9ef4tqHl2vBzeScCsWAbMG6vLPTeaD5MPZLogJBgQcqLs3rNQ2KrN6N_A5qZlcnsySMSmEeeVqGXUhfxGP334DBvHUNiwvnyAHC6jJynuDfL3_cybZ56UiUsNmaEvMW5RqsM87KSuRgcvDJ5NHEYp5eeUjIQy-s9j6wJ_sac-vpzFkG92svpNcQWf6KjWNWW7gAr2u_fw3K-tjtx8UbrGSHPNDY00HkLi6LfiL_GcT8pPGgEJghnS3ela1nJncdrhdSRFm9danaTqifebno4av-pcYXLsjOzmuLNqt-1cvh8BnZNp42QgfnySxtARliQShE9tfIN9LZmPHMmuB9Wit7C43Jhh0u-kPMDi_RCSNm7GKdZhlgFIpHi-hAWMVfBd9pDmGPwroQ3dzQAQ8YOdmoUaJrTe7ZuIzTwi6PeL54HDOfvvcDwF0hFIZfelNgAvpcVZQf92b4039_v6VtARrunPmoxbK5mo0E5N59mNcfZcfTCgv20Lylg7t0-bVWepm1IQPZJALw6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/products/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNmZhMWRkYTM1MDUzNWJlYzA1MmFmNDliOTZiNzY5ZjRiZWVlZjI0OGQ3Mzg2YzQ5N2M4ODA0NjMwZjA1MzQ1MjE2OWI1Zjk2ZTRkZDNjZjAiLCJpYXQiOjE1ODA0NTU0NzcsIm5iZiI6MTU4MDQ1NTQ3NywiZXhwIjoxNjEyMDc3ODc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZIt-1T2IN3hfm-QxBhHlUn9ANkpNEiK6lAFv8Z8g5mJU28YaXAhuEmhE4CAeaO3jV9wkyP9924tTxhXpJGSiaVLsSAPbu0YTVC7IsDeA5SBa7u6vaMYOCSjHwyMq-EXLYVVfYDNrFha8BuEEzblGSAE2AR56eg9ef4tqHl2vBzeScCsWAbMG6vLPTeaD5MPZLogJBgQcqLs3rNQ2KrN6N_A5qZlcnsySMSmEeeVqGXUhfxGP334DBvHUNiwvnyAHC6jJynuDfL3_cybZ56UiUsNmaEvMW5RqsM87KSuRgcvDJ5NHEYp5eeUjIQy-s9j6wJ_sac-vpzFkG92svpNcQWf6KjWNWW7gAr2u_fw3K-tjtx8UbrGSHPNDY00HkLi6LfiL_GcT8pPGgEJghnS3ela1nJncdrhdSRFm9danaTqifebno4av-pcYXLsjOzmuLNqt-1cvh8BnZNp42QgfnySxtARliQShE9tfIN9LZmPHMmuB9Wit7C43Jhh0u-kPMDi_RCSNm7GKdZhlgFIpHi-hAWMVfBd9pDmGPwroQ3dzQAQ8YOdmoUaJrTe7ZuIzTwi6PeL54HDOfvvcDwF0hFIZfelNgAvpcVZQf92b4039_v6VtARrunPmoxbK5mo0E5N59mNcfZcfTCgv20Lylg7t0-bVWepm1IQPZJALw6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/products/1?name=Gaming PC&details=This is a alien gaming pc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Gaming PC"
+						},
+						{
+							"key": "details",
+							"value": "This is a alien gaming pc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNmZhMWRkYTM1MDUzNWJlYzA1MmFmNDliOTZiNzY5ZjRiZWVlZjI0OGQ3Mzg2YzQ5N2M4ODA0NjMwZjA1MzQ1MjE2OWI1Zjk2ZTRkZDNjZjAiLCJpYXQiOjE1ODA0NTU0NzcsIm5iZiI6MTU4MDQ1NTQ3NywiZXhwIjoxNjEyMDc3ODc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZIt-1T2IN3hfm-QxBhHlUn9ANkpNEiK6lAFv8Z8g5mJU28YaXAhuEmhE4CAeaO3jV9wkyP9924tTxhXpJGSiaVLsSAPbu0YTVC7IsDeA5SBa7u6vaMYOCSjHwyMq-EXLYVVfYDNrFha8BuEEzblGSAE2AR56eg9ef4tqHl2vBzeScCsWAbMG6vLPTeaD5MPZLogJBgQcqLs3rNQ2KrN6N_A5qZlcnsySMSmEeeVqGXUhfxGP334DBvHUNiwvnyAHC6jJynuDfL3_cybZ56UiUsNmaEvMW5RqsM87KSuRgcvDJ5NHEYp5eeUjIQy-s9j6wJ_sac-vpzFkG92svpNcQWf6KjWNWW7gAr2u_fw3K-tjtx8UbrGSHPNDY00HkLi6LfiL_GcT8pPGgEJghnS3ela1nJncdrhdSRFm9danaTqifebno4av-pcYXLsjOzmuLNqt-1cvh8BnZNp42QgfnySxtARliQShE9tfIN9LZmPHMmuB9Wit7C43Jhh0u-kPMDi_RCSNm7GKdZhlgFIpHi-hAWMVfBd9pDmGPwroQ3dzQAQ8YOdmoUaJrTe7ZuIzTwi6PeL54HDOfvvcDwF0hFIZfelNgAvpcVZQf92b4039_v6VtARrunPmoxbK5mo0E5N59mNcfZcfTCgv20Lylg7t0-bVWepm1IQPZJALw6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:994/api/products/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "994",
+					"path": [
+						"api",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
