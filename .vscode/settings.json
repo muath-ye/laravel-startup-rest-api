@@ -1,0 +1,4 @@
+{
+    "phpcs.executablePath": "A:\\SDKs\\PHP\\php_codesniffer\\bin\\phpcs.bat",
+    "phpcs.showSources": true
+}
